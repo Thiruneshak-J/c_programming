@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-    int n,*a;
+    int n,*a,s;
     printf("enter the size of array:");
     scanf("%d",&n);
     a=(int *)malloc(n *(sizeof(int)));
@@ -25,12 +25,17 @@ int main(){
     }
     printf("]\n");
     for(i=0;i<n-1;i++){
+        s==0;
         for(j=0;j<n-1-i;j++){
             if (a[j]>a[j+1]){
                 temp=a[j+1];
                 a[j+1]=a[j];
                 a[j]=temp;
+                s=1;
             }
+        }
+        if(s==0){
+            break;
         }
     }
     printf("sorted array is [");
