@@ -25,7 +25,7 @@ int main(){
     }
     printf("]\n");
     for(i=0;i<n-1;i++){
-        s==0;
+        s=0;
         for(j=0;j<n-1-i;j++){
             if (a[j]>a[j+1]){
                 temp=a[j+1];
